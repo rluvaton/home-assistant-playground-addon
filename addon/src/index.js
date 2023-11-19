@@ -67,3 +67,7 @@ await fastify.listen({
     port: 3000,
     host: '0.0.0.0'
 });
+
+process.stdin.on('data', data => {
+    console.log('Got data', data.toString());
+})
