@@ -69,5 +69,5 @@ await fastify.listen({
 });
 
 process.stdin.on('data', data => {
-    console.log('Got data', data.toString());
+    console.log('Got data', {data: data.toString()});
 })
