@@ -47,9 +47,13 @@ await fastify.register(cors, {
     origin: true,
     credentials: true,
     // put your options here
-})
+});
 
-fastify.all('*', async (req, res) => {
+// Not setting OPTIONS as it is handled by cors plugin
+['delete', 'get', 'post', 'put', 'patch', 'head'].map(method => {
+    fastify[method]('*', handleApi);
+})
+async function handleApi(req, res) {
     return {
         method: req.method,
         url: req.url,
@@ -57,7 +61,7 @@ fastify.all('*', async (req, res) => {
         headers: req.headers,
         body: req.body,
     };
-});
+}
 
 await fastify.listen({
     port: 3000,

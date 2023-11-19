@@ -1,6 +1,6 @@
 name: "Playground addon"
 description: "HTTP & WebSocket Proxy to access HomeAssistant without exposing local ports"
-version: "1.0.1"
+version: "1.0.2"
 url: "https://github.com/rluvaton/home-assistant-playground-addon"
 slug: "playground_addon"
 
