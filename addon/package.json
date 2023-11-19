@@ -1,0 +1,30 @@
+{
+  "name": "home-assistant-playground-addon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "client:dev": "node src/index.js",
+    "client:prod": "NODE_ENV=production node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rluvaton/home-assistant-playground-addon.git"
+  },
+  "keywords": [],
+  "author": "Raz Luvaton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rluvaton/home-assistant-playground-addon/issues"
+  },
+  "homepage": "https://github.com/rluvaton/home-assistant-playground-addon#readme",
+  "dependencies": {
+    "fastify": "^4.24.3",
+    "pino": "^8.3.0",
+    "pino-pretty": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.6"
+  }
+}

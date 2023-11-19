@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: My Home Assistant Playground
+url: 'https://github.com/rluvaton/home-assistant-playground-addon'
+maintainer: Raz Luvaton
