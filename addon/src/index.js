@@ -1,4 +1,5 @@
 import Fastify from "fastify";
+import cors from "@fastify/cors";
 
 const fastify = Fastify({
     disableRequestLogging: true,
@@ -40,6 +41,13 @@ fastify.addHook('preHandler', function (req, reply, done) {
     }, 'Got request');
     done()
 });
+
+// TODO - allow cors but require authentication and verify it with the home assistant api
+await fastify.register(cors, {
+    origin: true,
+    credentials: true,
+    // put your options here
+})
 
 fastify.all('*', async (req, res) => {
     return {
